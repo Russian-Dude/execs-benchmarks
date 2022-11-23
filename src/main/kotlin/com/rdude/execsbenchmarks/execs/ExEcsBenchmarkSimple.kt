@@ -20,7 +20,7 @@ class ExEcsBenchmarkSimple {
     @Setup(Level.Iteration)
     fun setup() {
         world = World()
-        world.registerSystem(MovingSystem())
+        world.registerSystem(ExEcsMovingSystem())
         world.createEntities(
             amount = ENTITIES_AMOUNT,
             { ExEcsPositionComponent(ComponentsInitValues.positionComponentXs[it], ComponentsInitValues.positionComponentYs[it]) },
