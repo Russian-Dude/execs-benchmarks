@@ -36,9 +36,13 @@ tasks.test {
 apply(plugin = "execs-plugin")
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "11"
 }
 
+
+allOpen {
+    annotation("org.openjdk.jmh.annotations.State")
+}
 
 benchmark {
     targets {
