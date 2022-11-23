@@ -31,7 +31,7 @@ class ExEcsMovingSystem : IterableActingSystem(allOf = ExEcsPositionComponent::c
 }
 
 
-class ExEcsRemoveComponentSystem : IterableActingSystem(only = ExEcsRemoveMeComponent) {
+class ExEcsRemoveComponentSystem : IterableActingSystem(only = ExEcsRemoveMeComponent::class) {
 
     override fun act(entity: Entity) {
         entity.removeComponent<ExEcsRemoveMeComponent>()
@@ -47,7 +47,7 @@ class ExEcsAddRemovedComponentSystem : EventSystem<ComponentRemovedEvent<ExEcsRe
 }
 
 
-class ExEcsRemoveEntitySystem : IterableActingSystem(only = ExEcsRemoveMyEntityComponent) {
+class ExEcsRemoveEntitySystem : IterableActingSystem(only = ExEcsRemoveMyEntityComponent::class) {
 
     override fun act(entity: Entity) {
         entity.remove()

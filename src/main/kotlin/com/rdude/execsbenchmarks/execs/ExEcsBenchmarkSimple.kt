@@ -1,5 +1,6 @@
 package com.rdude.execsbenchmarks.execs
 
+import com.rdude.exECS.pool.fromPool
 import com.rdude.exECS.world.World
 import com.rdude.execsbenchmarks.config.*
 import kotlinx.benchmark.Measurement
@@ -23,8 +24,18 @@ class ExEcsBenchmarkSimple {
         world.registerSystem(ExEcsMovingSystem())
         world.createEntities(
             amount = ENTITIES_AMOUNT,
-            { ExEcsPositionComponent(ComponentsInitValues.positionComponentXs[it], ComponentsInitValues.positionComponentYs[it]) },
-            { ExEcsSpeedComponent(ComponentsInitValues.speedComponentXs[it], ComponentsInitValues.speedComponentYs[it]) }
+            {
+                fromPool<ExEcsPositionComponent> {
+                    x = ComponentsInitValues.positionComponentXs[it]
+                    y = ComponentsInitValues.positionComponentYs[it]
+                }
+            },
+            {
+                fromPool<ExEcsSpeedComponent> {
+                    x = ComponentsInitValues.speedComponentXs[it]
+                    y = ComponentsInitValues.speedComponentYs[it]
+                }
+            }
         )
     }
 
