@@ -9,7 +9,7 @@ import com.rdude.exECS.system.ActingSystem
 import com.rdude.exECS.system.EventSystem
 import com.rdude.exECS.system.IterableActingSystem
 
-class ExEcsPositionComponent(var x: Int, var y: Int) : Component, Poolable
+class ExEcsPositionComponent(var x: Int = 0, var y: Int = 0) : Component, Poolable
 
 class ExEcsSpeedComponent(var x: Int = 0, var y: Int = 0) : Component, Poolable
 

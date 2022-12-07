@@ -17,7 +17,8 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-benchmark-runtime:0.4.6")
 
-    implementation("com.github.Russian-Dude:exECS:1.5.0")
+    implementation("com.github.Russian-Dude:exECS:1.5.2")
+    implementation("io.github.quillraven.fleks:Fleks:2.1")
 }
 
 buildscript {

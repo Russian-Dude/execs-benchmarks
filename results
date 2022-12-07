@@ -1,0 +1,22 @@
+execs + fleks
+
+RANDOM_SEED: 717
+WARMUP_ITERATIONS: 10
+BENCHMARK_ITERATIONS: 10
+WORLD_ITERATIONS: 128
+ENTITIES_AMOUNT: 128
+
+main summary:
+Benchmark                                                   Mode  Cnt      Score     Error  Units
+c.r.e.execs.ExEcsBenchmarkAddAndRemoveComponent.benchmark  thrpt   10    481,408 ±  13,508  ops/s
+c.r.e.execs.ExEcsBenchmarkAddAndRemoveEntity.benchmark     thrpt   10  23016,959 ± 300,578  ops/s
+c.r.e.execs.ExEcsBenchmarkComplex.benchmark                thrpt   10  19692,997 ± 205,532  ops/s
+c.r.e.execs.ExEcsBenchmarkSimple.benchmark                 thrpt   10  25240,415 ± 368,672  ops/s
+c.r.e.fleks.FleksBenchmarkAddAndRemoveComponent.benchmark  thrpt   10      1,904 ±   0,136  ops/s
+c.r.e.fleks.FleksBenchmarkAddAndRemoveEntity.benchmark     thrpt   10  13562,191 ±  35,458  ops/s
+c.r.e.fleks.FleksBenchmarkComplex.benchmark                thrpt   10      1,921 ±   0,269  ops/s
+c.r.e.fleks.FleksBenchmarkSimple.benchmark                 thrpt   10   8272,176 ± 318,521  ops/s
+
+==============================================================================================================
+==============================================================================================================
+==============================================================================================================
